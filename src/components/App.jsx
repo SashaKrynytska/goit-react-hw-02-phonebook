@@ -24,9 +24,9 @@ export class App extends Component {
       number,
     };
 
-    //  if (this.state.contacts.some(e => e.name === name)) {
-    //     return alert(`${name} is already in contacts!`);
-    //   }
+    if (this.state.contacts.some(e => e.name === name)) {
+      return alert(`${name} is already in contacts.`);
+    }
 
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
